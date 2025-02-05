@@ -420,6 +420,8 @@ exports.getFullCourseDetails = async (req, res) => {
 exports.getInstructorCourses = async (req, res) => {
   try {
     const userId = req.user.id;
+    console.log("🔴🔴🔴🔴", userId);
+
     const instructorCourses = await Course.find({ instructor: userId }).sort({
       createdAt: -1,
     });
