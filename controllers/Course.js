@@ -425,7 +425,7 @@ exports.getInstructorCourses = async (req, res) => {
     const instructorCourses = await Course.find({ instructor: userId }).sort({
       createdAt: -1,
     });
-    // console.log(instructorCourses);
+    console.log(instructorCourses);
 
     return res.status(200).json({
       success: true,
