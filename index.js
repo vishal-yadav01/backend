@@ -22,12 +22,11 @@ database.connection();
 //*middlewares
 app.use(express.json());
 app.use(cookieParser());
-
 app.use(
   cors({
-    origin: "https://front-end-jade-nu.vercel.app",
-    credentials: true,
-    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
+    origin: "*", // Allow all origins
+    credentials: true, // Allow cookies to be sent
+    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"], // Allow all HTTP methods
     allowedHeaders: [
       "Content-Type",
       "Authorization",
@@ -35,8 +34,8 @@ app.use(
       "Content-Length",
       "Accept",
       "X-Custom-Header",
-    ],
-    exposedHeaders: ["Authorization", "Content-Type"],
+    ], // Allow all headers
+    exposedHeaders: ["Authorization", "Content-Type"], // Expose these headers in response
   })
 );
 
