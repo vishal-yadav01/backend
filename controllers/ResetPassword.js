@@ -35,7 +35,7 @@ exports.resetPassWordToken = async (req, res) => {
     console.log("details", updateDetails);
 
     // create url
-    const url = `http://localhost:3000/reset-password/${token}`;
+    const url = `https://front-end-jade-nu.vercel.app/reset-password/${token}`;
     //send mail containing url
     await mailSender(
       email,

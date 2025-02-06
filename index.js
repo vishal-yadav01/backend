@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: "*", // Allow all origins
-    credentials: true, // Allow cookies to be sent
+    // credentials: true, // Allow cookies to be sent
     methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"], // Allow all HTTP methods
     allowedHeaders: [
       "Content-Type",
